@@ -25,10 +25,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "npm"
 
       - name: Installer les dépendances
-        run: npm ci
+        run: npm install
 
       - name: Construire le site
         run: npm run build
@@ -50,4 +49,4 @@ jobs:
     steps:
       - name: Déployer sur GitHub Pages
         id: deployment
-        uses: actions/deploy-page@v4
+        uses: actions/deploy-pages@v4
